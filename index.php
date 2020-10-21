@@ -1,6 +1,6 @@
 <?php
 
-//read define file ... setting file
+//read define.php
 require_once("define.php");
 
 //db接続情報の定義
@@ -37,7 +37,6 @@ if(!empty($_POST['btn_submit'])){
   }else{//  messageのサニタイズ(無害化)
     $clean['message'] = htmlspecialchars($_POST['message'],ENT_QUOTES);
   }
-
 
   if(empty($error_message)) {
     $mysqli = new mysqli(DB_HOST,DB_USER,DB_PASS,DB_NAME);
