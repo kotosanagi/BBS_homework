@@ -1,5 +1,6 @@
 <?php
 
+//read define file ... setting file
 require_once("define.php");
 
 //db接続情報の定義
@@ -19,7 +20,7 @@ if(!empty($_POST['btn_submit'])){
 
   date_default_timezone_set('Asia/Tokyo');
 
-  $week_name = array("Sun","Mon","Tue","We  d","Thu","Fri","Sat");
+  $week_name = array("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
   $w = date('w');
   $view_date = date("Y/m/d")."(".$week_name[$w].") ".date("H:i:s");
 
